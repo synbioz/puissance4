@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang='fr'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Puissance 4</title>
+    <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script>
+    <script type="text/javascript" src="./client.js"></script>
+
+    <style type="text/css">
+      body {
+        font-family: "Lucida Grande";
+      }
+
+      #puissance4 {
+        border-collapse: collapse;
+      }
+
+      #puissance4 td, #iam, #who_plays {
+        background-image: url("public/images/p4_empty.png");
+        height: 97px;
+        width: 97px;
+      }
+
+      #puissance4 td.player_0, #iam.player_0, #who_plays.player_0 {
+        background-image: url("public/images/p4_player_1.png");
+      }
+
+      #puissance4 td.player_1, #iam.player_1, #who_plays.player_1 {
+        background-image: url("public/images/p4_player_2.png");
+      }
+
+      #messages {
+        border-bottom: 1px solid #ccc;
+        font-size: 0.8em;
+        position: absolute;
+        top: 10px;
+        left: 720px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        max-height: 450px;
+        overflow-y: auto;
+      }
+
+      #messages li {
+        border: 1px solid #ccc;
+        border-bottom: none;
+        padding: 0.5em 1em;
+      }
+
+      #messages li:nth-of-type(odd) {
+        background-color: #eee;
+      }
+
+      #informations {
+        position: absolute;
+        left: 920px;
+        top: 10px;
+      }
+
+      #informations td {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="messages">
+      <li>Waiting for you</li>
+    </ul>
+
+    <table id="informations">
+      <tr>
+        <td>You</td>
+        <td id="iam"></td>
+      </tr>
+
+      <tr>
+        <td>Current</td>
+        <td id="who_plays" class="player_0"></td>
+      </tr>
+    </table>
+
+    <table id="puissance4">
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <input id="start" type="button" value="Start" />
+  </body>
+</html>
