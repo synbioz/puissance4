@@ -1,11 +1,11 @@
 # Puissance 4
 
-## Installation
+## Install
 
 - node.js
 - npm
 - socket.io: npm install -g socket.io
 
-# TODO
+## TODO
 
-- Gestion des victoires en diagonale
+- Add diagonal victories
